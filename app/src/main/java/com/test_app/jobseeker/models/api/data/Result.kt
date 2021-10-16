@@ -32,4 +32,4 @@ data class Result(
     val salaryMin: Int,
     @SerializedName("title")
     val title: String
-):Parcelable
+) : Parcelable

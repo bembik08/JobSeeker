@@ -14,8 +14,8 @@ abstract class AbsFragment(@LayoutRes layout: Int = 0) : MvpAppCompatFragment(la
     @Inject
     lateinit var androidInjector: DispatchingAndroidInjector<Any>
     override fun onAttach(context: Context) {
-        super.onAttach(context)
         AndroidSupportInjection.inject(this)
+        super.onAttach(context)
     }
 
     override fun androidInjector(): AndroidInjector<Any> = androidInjector

@@ -5,6 +5,5 @@ import io.reactivex.rxjava3.core.Scheduler
 
 class DefaultSchedulers : Schedulers {
     override fun io(): Scheduler = io.reactivex.rxjava3.schedulers.Schedulers.io()
-
     override fun main(): Scheduler = AndroidSchedulers.mainThread()
 }

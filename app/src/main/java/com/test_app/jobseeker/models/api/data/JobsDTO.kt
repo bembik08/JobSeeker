@@ -12,4 +12,4 @@ data class JobsDTO(
     val mean: Double,
     @SerializedName("results")
     val results: List<Result>
-):Parcelable
+) : Parcelable

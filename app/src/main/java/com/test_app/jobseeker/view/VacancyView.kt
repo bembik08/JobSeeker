@@ -5,8 +5,11 @@ import moxy.MvpView
 import moxy.viewstate.strategy.alias.AddToEndSingle
 
 @AddToEndSingle
-interface VacancyView : MvpView{
-    fun showData(data : JobsDTO)
+interface VacancyView : MvpView {
+    fun showData(data: JobsDTO)
     fun showError(error: Throwable)
+    fun showSuccess(msg: String)
+    fun hideProgressBar()
+    fun attachTabLayout()
     fun back()
 }

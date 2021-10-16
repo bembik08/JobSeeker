@@ -6,4 +6,22 @@
     <string name="looking_search_label">Enter Duty</string>
     <string name="search_txt_btn">SEARCH</string>
     <string name="btn_text_apply_job">APPLY JOB</string>
+    <string name="main_menu__item_favorite">favorite</string>
+    <string name="main_menu_item_filter">filter</string>
+    <string name="filter_menu_county_russia">Russia</string>
+    <string name="filter_menu_county_usa">USA</string>
+    <string name="filter_menu_county_subtitle_ru">ru</string>
+    <string name="filter_menu_county_subtitle_us">us</string>
+    <string name="filter_menu_county_australia">Australia</string>
+    <string name="filter_menu_county_subtitle_au">au</string>
+    <string name="filter_menu_county__great_britain">Great Britain</string>
+    <string name="filter_menu_county_canada">Canada</string>
+    <string name="filter_menu_county_germany">Germany</string>
+    <string name="filter_menu_county_franche">Franche</string>
+    <string name="filter_menu_county_subtitle_fr">fr</string>
+    <string name="filter_menu_county_subtitle_de">de</string>
+    <string name="filter_menu_county_subtitle_ca">ca</string>
+    <string name="filter_menu_county_subtitle_gb">gb</string>
+    <string name="delete_from_favorite_btn">DELETE</string>
+    <string name="apply_job_fav_vacancy_btn">APPLY JOB</string>
 </resources>
