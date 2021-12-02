@@ -4,7 +4,11 @@
     <item
         android:id="@+id/favorite_menu"
         android:icon="@android:drawable/star_big_on"
-        android:title="favorite"
+        android:title="@string/main_menu__item_favorite"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/filter_menu"
+        android:icon="@android:drawable/arrow_down_float"
+        android:title="@string/main_menu_item_filter"
         app:showAsAction="always"/>
-
 </menu>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/ru"
+            android:checkable="true"
+            android:title="@string/filter_menu_county_russia"
+            android:titleCondensed="@string/filter_menu_county_subtitle_ru" />
+        <item
+            android:id="@+id/us"
+            android:checkable="true"
+            android:title="@string/filter_menu_county_usa"
+            android:titleCondensed="@string/filter_menu_county_subtitle_us" />
+        <item
+            android:id="@+id/au"
+            android:checkable="true"
+            android:title="@string/filter_menu_county_australia"
+            android:titleCondensed="@string/filter_menu_county_subtitle_au" />
+        <item
+            android:id="@+id/gb"
+            android:checkable="true"
+            android:title="@string/filter_menu_county__great_britain"
+            android:titleCondensed="@string/filter_menu_county_subtitle_gb" />
+        <item
+            android:id="@+id/ca"
+            android:checkable="true"
+            android:title="@string/filter_menu_county_canada"
+            android:titleCondensed="@string/filter_menu_county_subtitle_ca" />
+        <item
+            android:id="@+id/de"
+            android:checkable="true"
+            android:title="@string/filter_menu_county_germany"
+            android:titleCondensed="@string/filter_menu_county_subtitle_de" />
+        <item
+            android:id="@+id/fr"
+            android:checkable="true"
+            android:title="@string/filter_menu_county_franche"
+            android:titleCondensed="@string/filter_menu_county_subtitle_fr" />
+    </group>
+
+</menu>

@@ -10,4 +10,4 @@ data class Category(
     val label: String,
     @SerializedName("tag")
     val tag: String
-):Parcelable
+) : Parcelable

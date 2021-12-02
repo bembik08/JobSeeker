@@ -5,7 +5,7 @@ import com.github.terrakok.cicerone.androidx.FragmentScreen
 import com.test_app.jobseeker.ui.ViewPagerVacancy
 
 object ViewPagerVacancyScreen {
-    fun create(searchVal: String): Screen = FragmentScreen {
-        ViewPagerVacancy.newInstance(searchVal)
+    fun create(searchVal: String?, countrySearch: String?): Screen = FragmentScreen {
+        ViewPagerVacancy.newInstance(searchVal, countrySearch)
     }
 }

@@ -8,13 +8,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.test_app.jobseeker.databinding.ItemVacancyLayoutBinding
 import com.test_app.jobseeker.models.api.data.JobsDTO
 import com.test_app.jobseeker.models.api.data.Result
+import com.test_app.jobseeker.presenters.VacancyPresenter
 import com.test_app.jobseeker.utils.maps.MapView
 import com.yandex.mapkit.MapKitFactory
 
 class ViewPagerAdapter(
-    private val data: JobsDTO,
-    private val map: MapView
+    private var data: JobsDTO,
+    private val map: MapView,
+    private val presenter: VacancyPresenter,
+    private val searchingVal: String?,
+    private val countrySearch: String?
 ) : RecyclerView.Adapter<ViewPagerAdapter.ViewHolderVacancy>() {
+    private var page = 1
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderVacancy =
         ViewHolderVacancy(
@@ -32,6 +37,9 @@ class ViewPagerAdapter(
     override fun onBindViewHolder(holder: ViewHolderVacancy, position: Int) {
         holder.start()
         holder.setData(data.results, position)
+        if (position == data.results.size - 1) {
+            presenter.findJob(searchingVal, countrySearch, ++page)
+        }
     }
 
     override fun getItemCount(): Int = data.results.size
@@ -49,11 +57,13 @@ class ViewPagerAdapter(
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse(results[position].url))
                 root.context.startActivity(intent)
             }
+            binding.btnFavorite.setOnClickListener {
+                presenter.addFavoriteVacancy(data.results[position])
+            }
         }
 
         fun start() {
             binding.yandexMap.onStart()
         }
-
     }
 }

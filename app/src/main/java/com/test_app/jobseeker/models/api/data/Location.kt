@@ -10,4 +10,4 @@ data class Location(
     val area: List<String>,
     @SerializedName("display_name")
     val displayLocation: String
-):Parcelable
+) : Parcelable

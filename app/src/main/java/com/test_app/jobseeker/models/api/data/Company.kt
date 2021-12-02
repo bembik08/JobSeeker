@@ -8,4 +8,4 @@ import kotlinx.android.parcel.Parcelize
 data class Company(
     @SerializedName("display_name")
     val displayName: String
-):Parcelable
+) : Parcelable
