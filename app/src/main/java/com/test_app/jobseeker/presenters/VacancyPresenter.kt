@@ -36,8 +36,10 @@ class VacancyPresenter(
     fun addFavoriteVacancy(result: Result) {
         dispose += repo.addFav(result).observeOn(schedulers.main())
             .subscribe(
-                { viewState.showSuccess(SUCCESS_ADD_TO_FAVORITE_MSG)
-                Log.e("added", result.toString())},
+                {
+                    viewState.showSuccess(SUCCESS_ADD_TO_FAVORITE_MSG)
+                    Log.e("added", result.toString())
+                },
                 viewState::showError
             )
     }
@@ -45,5 +47,4 @@ class VacancyPresenter(
     override fun onDestroy() {
         dispose.clear()
     }
-
 }

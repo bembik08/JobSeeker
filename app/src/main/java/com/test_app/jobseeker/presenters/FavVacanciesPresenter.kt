@@ -16,7 +16,8 @@ class FavVacanciesPresenter(
     private val disposable = CompositeDisposable()
     override fun onFirstViewAttach() {
         disposable += repo.getFavoriteJobs().observeOn(schedulers.main()).subscribe(
-            {   val data = mutableListOf<Result>()
+            {
+                val data = mutableListOf<Result>()
                 data.addAll(it)
                 viewState.setData(data)
             },
@@ -24,13 +25,13 @@ class FavVacanciesPresenter(
         )
     }
 
-    fun deleteJob(job: Result){
-        disposable+= repo.deleteFromFavorite(job.description)
+    fun deleteJob(job: Result) {
+        disposable += repo.deleteFromFavorite(job.description)
             .observeOn(schedulers.main())
             .subscribe(
-                {viewState.showSuccess(SUCCESS_DELETE_FROM_FAVORITE_MSG)},
+                { viewState.showSuccess(SUCCESS_DELETE_FROM_FAVORITE_MSG) },
                 viewState::showError
-        )
+            )
     }
 
     override fun onDestroy() {
